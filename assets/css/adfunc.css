@@ -237,3 +237,9 @@ span {
   outline: none;
   box-shadow: 0 0 4px rgba(0, 128, 0, 0.5); /* Green shadow on focus */
 }
+
+@media screen and (max-width: 1024px) {
+  .function-admin{
+    width: 100%;
+  }  
+}
