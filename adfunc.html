@@ -55,13 +55,13 @@
 
                         <!-- Ô tìm kiếm người dùng -->
                         <input type="text" id="searchUserInput" class="form-control mb-3"
-                            placeholder="Tìm kiếm người dùng..." onkeyup="searchTable('searchUserInput', 'userTable')">
+                            placeholder="Tìm kiếm người dùng...">
 
                         <!-- Form thêm người dùng -->
                         <input type="text" id="newUserName" class="form-control mb-1" placeholder="Tên người dùng">
                         <input type="email" id="newUserEmail" class="form-control mb-1" placeholder="Email">
                         <input type="text" id="newUserPhone" class="form-control mb-1" placeholder="Số điện thoại">
-                        <button onclick="addUser()" class="btn btnn btn-success">Thêm Người dùng</button>
+                        <button class="btn btnn btn-success">Thêm Người dùng</button>
 
                         <!-- Bảng người dùng -->
                         <table class="table table-bordered" id="userTable">
@@ -70,7 +70,7 @@
                                     <th>ID</th>
                                     <th>Tên</th>
                                     <th>Email</th>
-                                    <th>Số điện thoại</th> <!-- Cột mới cho Số điện thoại -->
+                                    <th>Số điện thoại</th>
                                     <th>Trạng thái</th>
                                     <th>Hành động</th>
                                 </tr>
@@ -83,10 +83,9 @@
                                     <td>0999333777</td>
                                     <td>Hoạt động</td>
                                     <td>
-                                        <button class="btn btn-primary btn-sm" onclick="editUser(this)">Sửa</button>
-                                        <button class="btn btn-danger btn-sm" onclick="deleteUser(this)">Xóa</button>
-                                        <button class="btn btn-warning btn-sm"
-                                            onclick="toggleBlockUser(this)">Khóa</button>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm" >Xóa</button>
+                                        <button class="btn btn-warning btn-sm">Khóa</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -96,10 +95,9 @@
                                     <td>0983868386</td>
                                     <td>Hoạt động</td>
                                     <td>
-                                        <button class="btn btn-primary btn-sm" onclick="editUser(this)">Sửa</button>
-                                        <button class="btn btn-danger btn-sm" onclick="deleteUser(this)">Xóa</button>
-                                        <button class="btn btn-warning btn-sm"
-                                            onclick="toggleBlockUser(this)">Khóa</button>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
+                                        <button class="btn btn-warning btn-sm">Khóa</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -123,15 +121,14 @@
 
                         <div class="custom-file-container mb-1">
                             <label for="newProductImage" class="custom-file-upload">Chọn tệp</label>
-                            <input class="pre-img" type="file" id="newProductImage" accept="image/*"
-                                onchange="previewImage(event)">
+                            <input class="pre-img" type="file" id="newProductImage" >
                         </div>
 
                         <!-- Image preview section -->
                         <img id="imagePreview" class="img-thumbnail" src="#" alt="Image Preview"
                             style="display: none; width: 100px; height: 100px; margin-top: 10px;">
 
-                        <button onclick="addProduct()" class="btn btn-success mb-3">Thêm Sản phẩm</button>
+                        <button class="btn btn-success mb-3">Thêm Sản phẩm</button>
 
 
 
@@ -158,8 +155,60 @@
                                     <td><img src="./assets/img/san-pham/hoa-qua/chanh-day.png" alt="Product Image"
                                             class="product-image" style="width: 50px; height: 50px;"></td>
                                     <td>
-                                        <button class="btn btn-primary btn-sm" onclick="editProduct(this)">Sửa</button>
-                                        <button class="btn btn-danger btn-sm" onclick="deleteProduct(this)">Xóa</button>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Dưa hấu</td>
+                                    <td>Hoa quả</td>
+                                    <td>20,000₫</td>
+                                    <td>100</td>
+                                    <td><img src="./assets/img/san-pham/hoa-qua/dua-hau.png" alt="Product Image"
+                                            class="product-image" style="width: 50px; height: 50px;"></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Salad ức gà</td>
+                                    <td>Hữu cơ</td>
+                                    <td>50,000₫</td>
+                                    <td>20</td>
+                                    <td><img src="./assets/img/san-pham/huu-co/ucga.png" alt="Product Image"
+                                            class="product-image" style="width: 50px; height: 50px;"></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Bơ</td>
+                                    <td>Hoa quả</td>
+                                    <td>70,000₫</td>
+                                    <td>30</td>
+                                    <td><img src="./assets/img/san-pham/hoa-qua/bo-hass.png" alt="Product Image"
+                                            class="product-image" style="width: 50px; height: 50px;"></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Cherry</td>
+                                    <td>Hoa quả</td>
+                                    <td>560,000₫</td>
+                                    <td>30</td>
+                                    <td><img src="./assets/img/san-pham/hoa-qua/Cherry.png" alt="Product Image"
+                                            class="product-image" style="width: 50px; height: 50px;"></td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm">Sửa</button>
+                                        <button class="btn btn-danger btn-sm">Xóa</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -181,7 +230,7 @@
                                 <input type="date" id="endDate" class="form-control">
                             </div>
                             <div class="col ">
-                                <button onclick="filterOrders()" class="loc btnn btn mt-4">Lọc</button>
+                                <button class="loc btnn btn mt-4">Lọc</button>
                             </div>
                         </div>
 
@@ -243,10 +292,60 @@
                                     <td>Chưa xử lý</td>
                                     <td>2024-11-01</td>
                                     <td>
-                                        <button class="btn btn-info btn-sm" onclick="viewOrderDetails(1)">Chi
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hh">Chi
                                             tiết</button>
-                                        <select class="form-select form-select-sm mt-1"
-                                            onchange="updateOrderStatus(1, this)">
+                                        <select class="form-select form-select-sm mt-1">
+                                            <option value="Chưa xử lý">Chưa xử lý</option>
+                                            <option value="Đã xác nhận">Đã xác nhận</option>
+                                            <option value="Đã giao thành công">Đã giao thành công</option>
+                                            <option value="Đã huỷ">Đã huỷ</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Nguyễn Văn B</td>
+                                    <td>Quận 2</td>
+                                    <td>Chưa xử lý</td>
+                                    <td>2024-11-01</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hh">Chi
+                                            tiết</button>
+                                        <select class="form-select form-select-sm mt-1">
+                                            <option value="Chưa xử lý">Chưa xử lý</option>
+                                            <option value="Đã xác nhận">Đã xác nhận</option>
+                                            <option value="Đã giao thành công">Đã giao thành công</option>
+                                            <option value="Đã huỷ">Đã huỷ</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Nguyễn Văn C</td>
+                                    <td>Quận 5</td>
+                                    <td>Chưa xử lý</td>
+                                    <td>2024-11-01</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hh">Chi
+                                            tiết</button>
+                                        <select class="form-select form-select-sm mt-1">
+                                            <option value="Chưa xử lý">Chưa xử lý</option>
+                                            <option value="Đã xác nhận">Đã xác nhận</option>
+                                            <option value="Đã giao thành công">Đã giao thành công</option>
+                                            <option value="Đã huỷ">Đã huỷ</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Nguyễn Thị D</td>
+                                    <td>Quận Phú Nhuận</td>
+                                    <td>Chưa xử lý</td>
+                                    <td>2024-11-01</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hh">Chi
+                                            tiết</button>
+                                        <select class="form-select form-select-sm mt-1">
                                             <option value="Chưa xử lý">Chưa xử lý</option>
                                             <option value="Đã xác nhận">Đã xác nhận</option>
                                             <option value="Đã giao thành công">Đã giao thành công</option>
@@ -256,6 +355,48 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="modal fade" id="hh" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Thông tin đơn hàng</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tên khách hàng</th>
+                                                        <th>Địa chỉ</th>
+                                                        <th>Sản phẩm đã mua</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Nguyễn Văn A</td>
+                                                        <td>42 Trần Hưng Đạo - P.Phạm Ngũ Lão - Q.1 - Tp.HCM</td>
+                                                        <td>Chanh dây - 2kg <br> Kiwi - 5kg</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h6>Trạng thái Đơn hàng:</h6>
+                                            <p>Đã giao</p>
+                                            <h6>Ngày đặt:</h6>
+                                            <p>15h30 ngày 25/11/2024</p>
+                                            <strong>Tổng giá trị đơn hàng: 500.000đ</strong>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Thoát</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Thống kê Kinh doanh -->
@@ -273,7 +414,7 @@
                                 <input type="date" id="endStatDate" class="form-control">
                             </div>
                             <div class="col">
-                                <button onclick="generateStatistics()" class="btn btn-primary mt-4">Thống kê</button>
+                                <button class="btn btn-primary mt-4">Thống kê</button>
                             </div>
                         </div>
 
@@ -285,16 +426,44 @@
                                     <th>Mặt hàng</th>
                                     <th>Số lượng bán</th>
                                     <th>Tổng doanh thu</th>
-                                    <th>Hành động</th>
                                 </tr>
                             </thead>
                             <tbody id="productStatisticsBody">
-                                <!-- Product statistics rows will be dynamically generated here -->
+                                <tr>
+                                    <td>Chanh dây</td>
+                                    <td>200</td>
+                                    <td>20.000.000₫</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Táo</td>
+                                    <td>150</td>
+                                    <td>15.000.000₫</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Cam</td>
+                                    <td>180</td>
+                                    <td>18.000.000₫</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dưa hấu</td>
+                                    <td>120</td>
+                                    <td>12.000.000₫</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Chuối</td>
+                                    <td>250</td>
+                                    <td>25.000.000₫</td>
+
+                                </tr>
                             </tbody>
                         </table>
-                        <p><strong>Tổng doanh thu:</strong> <span id="totalRevenue">0₫</span></p>
-                        <p><strong>Bán chạy nhất:</strong> <span id="bestSellingProduct">N/A</span></p>
-                        <p><strong>Ít bán nhất:</strong> <span id="leastSellingProduct">N/A</span></p>
+                        <p><strong>Tổng doanh thu:</strong> <span id="totalRevenue">90.000.000₫</span></p>
+                        <p><strong>Bán chạy nhất:</strong> <span id="bestSellingProduct">Chanh dây</span></p>
+                        <p><strong>Ít bán nhất:</strong> <span id="leastSellingProduct">Chuối</span></p>
 
                         <!-- Customer Revenue Statistics -->
                         <h5>Thống kê theo Khách hàng</h5>
@@ -307,9 +476,101 @@
                                 </tr>
                             </thead>
                             <tbody id="customerStatisticsBody">
-                                <!-- Customer statistics rows will be dynamically generated here -->
+                                <tr>
+                                    <td>Khách hàng A</td>
+                                    <td>1.000.000₫</td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#customer">Xem chi tiết</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách hàng B</td>
+                                    <td>750.000₫</td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#customer">Xem chi tiết</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách hàng C</td>
+                                    <td>500.000₫</td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#customer">Xem chi tiết</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách hàng D</td>
+                                    <td>300.000₫</td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#customer">Xem chi tiết</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Khách hàng E</td>
+                                    <td>1.200.000₫</td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#customer">Xem chi tiết</button></td>
+                                </tr>
                             </tbody>
                         </table>
+                        <!-- Button trigger modal -->
+
+                        <!-- khách hàng -->
+                        <div class="modal fade" id="customer" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Danh sách đơn hàng mà khách hàng
+                                            đã mua</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Tên sản phẩm</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Giá</th>
+                                                    <th>Tổng</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Chanh dây</td>
+                                                    <td>5</td>
+                                                    <td>100,000₫</td>
+                                                    <td>500,000₫</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Táo</td>
+                                                    <td>3</td>
+                                                    <td>150,000₫</td>
+                                                    <td>450,000₫</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dưa hấu</td>
+                                                    <td>2</td>
+                                                    <td>200,000₫</td>
+                                                    <td>400,000₫</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="3" class="text-right"><strong>Tổng cộng:</strong></td>
+                                                    <td><strong>1,350,000₫</strong></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        <h6>Trạng thái Đơn hàng:</h6>
+                                        <p>Đã giao</p>
+                                        <h6>Ngày đặt:</h6>
+                                        <p>2024-11-01</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Thoát</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -186,7 +186,7 @@ button {
 }
 strong,
 span {
-  color: #fff;
+  color: var(--color-three);
 }
 /* Ensure the invoice details align to the left */
 .invoice-details-content {
@@ -238,6 +238,16 @@ span {
   box-shadow: 0 0 4px rgba(0, 128, 0, 0.5); /* Green shadow on focus */
 }
 
+.modal-title{
+  color: #333;
+}
+.btn-primary {
+  background-color: var(--color-four);
+  border: 0;
+}
+.btn-primary:hover{
+  background-color: var(--color-two)
+}
 @media screen and (max-width: 1024px) {
   .function-admin{
     width: 100%;
